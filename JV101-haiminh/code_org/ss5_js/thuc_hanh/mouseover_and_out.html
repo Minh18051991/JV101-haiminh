@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo">this is a text</p>
+</body>
+<script>
+    var demo=document.getElementById("demo");
+    demo.addEventListener("mouseout",mouseout);
+    demo.addEventListener("mouseover",mouseover)
+    function mouseover() {
+        document.getElementById("demo").style.color = "red";
+
+
+    };
+    function mouseout(){
+        document.getElementById("demo").style.color="black";
+    }
+</script>
+</html>
