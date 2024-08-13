@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let n = +prompt("Nhap doanh thu ban hang : ");
+    let ratio;
+
+    if (n < 100000000) {
+        ratio = 5;
+    } else if (n < 300000000) {
+        ratio = 7;
+    } else if (n < 500000000) {
+        ratio = 8;
+    }
+else { ratio = 10 ;}
+    let benefit = (n * ratio) / 100;
+document.getElementById("result").innerText= "Tien hoa hong cua ban la: " + benefit;
+</script>
+
+</body>
+</html>

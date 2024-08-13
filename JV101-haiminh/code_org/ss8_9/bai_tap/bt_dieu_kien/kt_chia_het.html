@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nhập a</th>
+        <th><input id="n1" type="number"></th>
+    </tr>
+    <tr>
+        <td>Nhập b</td>
+        <td><input id="n2" type="number"></td>
+    </tr>
+</table>
+<h2 id="result"></h2>
+<button onclick='kiemtra()' type="button">ok</button>
+<script>
+    function kiemtra(){
+        let a = +document.getElementById("n1").value;
+        let b = +document.getElementById("n2").value;
+        if (a % b !== 0) {
+            document.getElementById("result").innerText = "a khong chia hết cho b";
+        } else {
+            document.getElementById("result").innerText = "a chia hết cho b";
+        }
+
+    }
+</script>
+
+
+</body>
+</html>

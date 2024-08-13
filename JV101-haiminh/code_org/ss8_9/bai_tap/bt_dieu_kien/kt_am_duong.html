@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<h1> Nhap so</h1>
+<input id="number" type="number">
+<button onclick="xet()">Xet</button>
+<p id="result">ket qua</p>
+<script>
+    function xet() {
+        let n = +document.getElementById("number").value;
+        if (n < 0) {
+            document.getElementById("result").innerText = "nho hon 0";
+        } else if (n > 0) {
+            document.getElementById("result").innerText = "lon hon 0";
+        } else {
+            document.getElementById("result").innerText = " YOU ARE ZERO";
+        }
+    }
+</script>
+
+</body>
+</html>

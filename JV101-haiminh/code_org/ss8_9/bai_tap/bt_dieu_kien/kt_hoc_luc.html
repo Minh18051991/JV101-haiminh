@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nhập diem kiem tra</th>
+        <th><input id="kt" type="number"</th>
+    </tr>
+    <tr>
+        <th>Nhập diem thi giua ky</th>
+        <td><input id="gk" type="number"></td>
+    </tr>
+    <tr>
+        <th>Nhập diem thi hoc ky</th>
+        <td><input id="hk" type="number"></td>
+    </tr>
+</table>
+<button onclick='xet()' type="button">ok</button>
+<h2 id="result"></h2>
+
+</body>
+<script>
+    function xet() {
+        let kt = +document.getElementById("kt").value;
+        let gk = +document.getElementById("gk").value;
+        let hk = +document.getElementById("hk").value;
+        let dtb = (kt + gk + hk) / 3;
+
+        if (dtb >= 8.5) {
+            document.getElementById("result").innerText = "gioi " + dtb;
+        } else if (dtb >= 6.5) {
+            document.getElementById("result").innerText = "kha " + dtb;
+        } else if (dtb >= 5.5) {
+            document.getElementById("result").innerText = "tb " + dtb;
+        } else {
+            document.getElementById("result").innerText = "yeu " + dtb;
+        }
+    }
+
+
+</script>
+</html>

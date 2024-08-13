@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p> nhap tuoi</p>
+<input id="age" type="number">
+<button onclick="xettuoi()">Xet</button>
+<p id="result">ket qua</p>
+<script>
+    function xettuoi() {
+        let age = +document.getElementById("age").value;
+        if (age < 16) {
+            document.getElementById("result").innerText = 'khong du dk vao lop 10';
+
+        } else {
+            document.getElementById("result").innerText = "du dk vao lop 10";
+        }
+    }
+</script>
+
+
+</body>
+</html>

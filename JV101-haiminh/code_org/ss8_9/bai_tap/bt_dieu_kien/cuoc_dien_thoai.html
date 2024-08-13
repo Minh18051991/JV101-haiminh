@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhap data internet da dung ( GB)</p>
+<input id="data" type="number">
+<p>nhap thoi gian nghe goi trong nuoc (phut)</p>
+<input id="domestic" type="number">
+<p>Nhap thoi gian nghe goi quoc te</p>
+<input id="inter" type="number">
+<button onclick="tinhtien()">Tinh Tien</button>
+<p id="result"></p>
+<script>
+     function tinhtien() {
+        let gb = +document.getElementById("data").value;
+        let dos = +document.getElementById("domestic").value;
+        let int = +document.getElementById("inter").value;
+        let result = parseInt(6000 * gb + 2000 * dos + 5000 * int);
+        document.getElementById("result").innerText = "tien dien thoai thang nay : " + result;
+    }
+</script>
+
+</body>
+</html>
