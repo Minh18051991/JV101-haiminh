@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><p>Nhập cạnh a</p>
+<input id="canhA">
+<p>Nhập cạnh b</p>
+<input id="canhB">
+<button onclick="dienTich()">Tính</button>
+<p id="ketQua"></p>
+<script>
+    function dienTich () {
+        let a = +document.getElementById("canhA").value;
+        let b = +document.getElementById("canhB").value;
+
+        let dienTich ;
+        if ( a > 0 && b > 0 )
+        {dienTich = (a*b)/2 ;
+            document.getElementById("ketQua").innerText = "Diện tích là : " + dienTich + "m2" ;}
+        else
+        { document.getElementById("ketQua").innerText= "không thể là số âm";}
+    }
+</script>
+
+
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tich</title>
+
+</head>
+<body>
+<p>Nhập cạnh</p>
+<input id="canh">
+<button onclick="dienTich()">Tính</button>
+<p id="ketQua"></p>
+<script>
+    function dienTich () {
+        let a = +document.getElementById("canh").value;
+        let dienTich ;
+        if ( a > 0)
+        {dienTich = Math.pow(a,2) ;
+        document.getElementById("ketQua").innerText = "Diện tích là : " + dienTich ;}
+        else
+        { document.getElementById("ketQua").innerText= "không thể là số âm";}
+    }
+
+</script>
+
+</body>
+</html>

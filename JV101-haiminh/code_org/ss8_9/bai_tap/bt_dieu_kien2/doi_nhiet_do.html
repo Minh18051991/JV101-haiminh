@@ -7,8 +7,15 @@
 <body>
 <p>Nhập nhiệt độ</p>
 <input id="nhietdo" type="number">
+<button id="doF" onclick="doi()">Chuyển</button>
+<h3 id = "ketQua" F></h3>
 <script>
-    let doC = +document.getElementById("nhietdo").value
+    function doi(){
+    let doC = +document.getElementById("nhietdo").value;
+    let doF = doC * 9/5 + 32 ;
+    document.getElementById("ketQua").innerText = "độ F là "+ doF ;
+    }
+
 </script>
 
 </body>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai phuong trinh bac 2</title>
+</head>
+<body>
+<p>Nhập he so a</p>
+<input id="A">
+<p>Nhập he so b</p>
+<input id="B">
+<p>Nhập he so c</p>
+<input id="C">
+
+<button onclick="giaiPhuongTrinh()">Tính</button>
+<p id="ketQua"></p>
+
+
+</body>
+<script>
+    function giaiPhuongTrinh() {
+        let a = +document.getElementById("A").value;
+        let b = +document.getElementById("B").value;
+        let c = +document.getElementById("C").value;
+        if (a == 0) {
+            if (b == 0) {
+                if (c == 0) {
+                    document.getElementById("ketQua").innerText = "Phuong trinh co vo so nghiem";
+                } else {
+                    document.getElementById("ketQua").innerText = "Phuong trinh  vo  nghiem";
+                }
+            } else {
+                let x1 = -c / b;
+                document.getElementById("ketQua").innerText = "Nghiem cua phuong trinh la :  " + x1;
+            }
+        } else {
+            let delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                document.getElementById("ketQua").innerText = "Phuong trinh  vo  nghiem";
+            } else if (delta === 0) {
+                let x2 = -b / (2 * a);
+                document.getElementById("ketQua").innerText = "Nghiem cua phuong trinh la : " + x2;
+            } else {
+                let x3 = (-b + Math.sqrt(delta)) / (2 * a);
+                let x4 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.getElementById("ketQua").innerText = " 2 Nghiem cua phuong trinh la : " + x3 + "va" + x4;
+            }
+        }
+
+    }
+</script>
+
+</html>

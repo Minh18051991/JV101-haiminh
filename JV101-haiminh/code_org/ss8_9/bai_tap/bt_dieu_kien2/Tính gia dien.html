@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<p>Nhập số điện</p>
+<input id="so dien">
+<h id="ketQua"></h>
+<button onclick="tinh()"> check</button>
+<script>
+    function tinh() {
+        let soDien = +document.getElementById("so dien").value;
+        let tienDien;
+        if (soDien > 0)
+            if (soDien < 50) {
+                tienDien = soDien * 1800;
+                document.getElementById("ketQua").innerText = "tiền điện là : " + tienDien;
+            } else if (soDien > 50 && soDien < 100) {
+                tienDien = (soDien - 50) * 1900 + 50 * 1800;
+                document.getElementById("ketQua").innerText = "tiền điện là : " + tienDien;
+            } else if (soDien > 100 && soDien < 200) {
+                tienDien = (soDien - 100) * 2000 + 50 * 1800 + 50 * 1900;
+                document.getElementById("ketQua").innerText = "tiền điện là : " + tienDien;
+            } else {
+                tienDien = (soDien - 200) * 3000 + 100 * 2000 + 50 * 1900 + 50 * 1800;
+                document.getElementById("ketQua").innerText = "tiền điện là : " + tienDien;
+            }
+    }
+</script>
+</body>
+</html>

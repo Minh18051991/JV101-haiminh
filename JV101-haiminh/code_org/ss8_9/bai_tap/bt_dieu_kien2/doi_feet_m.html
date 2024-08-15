@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feet_Met</title>
+</head>
+<body>
+<p>Nhập </p>
+<input id="height" type="number">
+<button  onclick="chuyen()">Chuyển</button>
+<h3 id = "ketQua" ></h3>
+
+</body>
+<script>
+    function chuyen() {
+        let met = +document.getElementById("height").value;
+        let feet = met * 3.2808 ;
+        document.getElementById("ketQua").innerText = "kết quả : " + feet;
+    }
+</script>
+</html>
