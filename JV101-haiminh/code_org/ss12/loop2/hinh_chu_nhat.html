@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle with Borders</title>
+</head>
+<body>
+<script>
+    let rows = 5;
+    let cols = 14;
+
+    for (let i = 0; i < rows; i++) {
+        let line = ' ';
+        for (let j = 0; j < cols; j++) {
+
+            if (i === 0 || i === rows-1 || j === 0 || j === cols -1 ) {
+                line += '*';
+            } else {
+                line += ' ';
+            }
+        }
+        document.write("<pre>"+line+"</pre>");
+    }
+</script>
+</body>
+</html>

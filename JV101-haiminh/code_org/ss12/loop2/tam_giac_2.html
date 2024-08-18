@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let triangle = '';
+    for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= 10 - i; j++) {
+            triangle += '*';
+        }
+        for (let k = 1; k <= i; k++) {
+            triangle += ' ';
+        }
+        triangle += '<br>';
+    }
+    document.write("<pre>"+triangle +"</pre>");
+
+</script>
+
+</body>
+</html>

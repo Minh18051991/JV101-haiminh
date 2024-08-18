@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số Nguyên tố</title>
+</head>
+<body>
+
+<script>
+
+    let number = parseInt(prompt("Nhập số lượng số nguyên tố"));
+    checkPrimeNumber(number);
+
+    function checkPrimeNumber(number) {
+        let count = 0; // Đếm số  ước của số đang xét
+        let countSoNguyenTo = 0; // Đếm đủ số lượng số nguyen to chưa
+
+        for (let N = 2; N < number; N++) {
+            if (countSoNguyenTo < number) { // so luong so nguyen to nhỏ hơn number nhập vào
+                for (let j = 1; j <= N; j++) {
+                    if (N % j == 0) {
+                        count += 1;
+                    }
+                }
+                if (count == 2) {
+                    document.write(N + " Là Số Nguyên Tố" + "<br>");
+                    countSoNguyenTo += 1;
+                }
+                count = 0;
+
+            } else {
+                break;
+            }
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>

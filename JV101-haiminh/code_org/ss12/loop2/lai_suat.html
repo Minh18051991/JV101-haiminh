@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lãi suất</title>
+</head>
+<body>
+<script>
+    let soTien = +prompt("nhập tiền vay");
+    let soThang = +prompt("nhập vào số tháng");
+    let tienNo = soTien
+    for (let i = 1; i <= soThang; i++) {
+        let tienLai = soTien * 0.05;
+        soTien += tienLai;
+        tienNo += tienLai;
+    }
+
+    document.write("tiền phải trả :" + tienNo);
+</script>
+</body>
+</html>

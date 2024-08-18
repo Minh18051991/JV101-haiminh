@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế</title>
+</head>
+<body>
+<p>Nhập Thu nhận </p>
+<input id="thuNhap">
+<h id="ketQua"></h>
+<button onclick="tinh()"> check</button>
+<script>
+    function tinh() {
+        let thuNhap = +document.getElementById("thuNhap").value;
+        let thue;
+        if (thuNhap > 0)
+            if (thuNhap < 60000000) {
+                thue = thuNhap * 0.05;
+                document.getElementById("ketQua").innerText = "tiền thuế là : " + thue;
+            } else if (thuNhap > 60000000 && thuNhap < 120000000) {
+                thue = thuNhap * 0.1;
+                document.getElementById("ketQua").innerText = "tiền thuế là : " + thue;
+            } else if (thuNhap > 120000000 && thuNhap < 216000000) {
+                thue = thuNhap * 0.15;
+                document.getElementById("ketQua").innerText = "tiền thuế là : " + thue;
+            } else {
+               thue = thuNhap * 0.2;
+                document.getElementById("ketQua").innerText = "tiền thuế là : " + thue;
+            }
+    }
+</script>
+
+</body>
+</html>
