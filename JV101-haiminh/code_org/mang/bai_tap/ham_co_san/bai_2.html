@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dauVao = prompt("Nhập 1 số tuỳ chọn  ");
+    let daySo = dauVao.split('');
+    let ketQua = "";
+    for (let i = 0; i < daySo.length; i++) {
+        ketQua += daySo[i];
+        if (i < daySo.length - 1) {
+            if (daySo[i] % 2 === 0 && daySo[i + 1] % 2 === 0) {
+                ketQua += "-";
+            }
+        }
+    }
+    document.write(ketQua);
+
+
+</script>
+
+</body>
+</html>

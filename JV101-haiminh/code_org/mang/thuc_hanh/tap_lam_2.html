@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo mảng</title>
+</head>
+<body>
+<p><b>Nhập dữ liệu</b></p>
+<input id=duLieu>
+<button onclick=themDuLieu()>Thêm</button>
+<button onclick=hienThi()>Hiển Thị</button>
+<p id="phanTu"></p><br>
+<p id="ketQua"></p>
+<script>
+    let x = 0;
+    let duLieu = [x];
+
+    function themDuLieu() {
+        duLieu[x] = +document.getElementById("duLieu").value;
+        if (!(duLieu.length > 20 || isNaN(duLieu[x]))) {
+            alert("Đã thêm" + duLieu[x] + "vào dữ liêu " + x)
+        } else {
+            alert("Nhập lại");
+            duLieu.pop();
+        }
+
+
+        x++;
+        document.getElementById("duLieu").value = "";
+
+    }
+
+    function hienThi() {
+        let y = "<hr/>";
+        for (let i = 0; i < duLieu.length; i++) {
+            y += "Phần tử " + i + "=" + duLieu[i] + "<br/>";
+
+        }
+        document.getElementById("ketQua").innerHTML = y;
+        document.write(duLieu)
+    }
+
+    for (let i = 0; i <= duLieu.length; i++)
+        if (duLieu[i] % 2 === 0) {
+            let chan = [];
+            chan.push(duLieu[i]);
+        } else {
+            let le = [];
+            le.push(duLieu[i]);
+        }
+    if (le.length === chan.length) {
+        alert("ok");
+    } else {
+        alert(" ok");
+    }
+</script>
+</body>
+
+</html>

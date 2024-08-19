@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = []
+    for (let i = 0; i < 3; i++) {
+        mang [i] = [+prompt(" Nhập số Nguyên :")];
+    }
+    let soLonNhat = mang[0];
+    for (let i = 0; i < mang.length; i++) {
+        if (soLonNhat < mang[i]) {
+            soLonNhat = mang[i];
+        }
+    }
+    let tong = 0;
+    for (let i = 0; i < mang.length; i++) {
+
+        tong += (+mang[i]);
+    }
+    let trungBinh = tong / mang.length;
+    document.write("số lớn nhất là : " + soLonNhat + " và trung bình tổng các số  là : " + trungBinh);
+
+
+</script>
+
+</body>
+</html>

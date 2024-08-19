@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt("nhập dãy ký tu");
+    let ketQua = " ";
+    for (let i = 0; i < x.length; i++) {
+        let kyTu = x[i];
+        if (kyTu >= 'A' && kyTu <= 'Z') {
+            ketQua += kyTu.toLowerCase();
+        } else {
+            ketQua += kyTu.toUpperCase();
+        }
+    }
+    document.write(ketQua);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 4; i++) {
+        arr[i] = +prompt("nhâp vào số nguyên :");
+        if (arr[i] % 1 === 0) {
+            alert("đã nhập số " + arr[i] + " vi trí " + i);
+        } else {
+            alert("Nhập lại");
+            i--;
+        }
+    }
+    document.write("mảng ban đầu " + arr + "<br>");
+    let number = +prompt("Nhập so nguyen  bất kỳ : ");
+    let found = false;
+    for (let i = 0;i<4; i++) {
+        found = true;
+        if (number == arr[i]) {
+            found = true;
+            for (let j = 0; j < 3; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length - 1] = 0;
+        }
+    }
+        if (found) {
+            alert("đã xóa " + number + " khỏi mảng");
+            document.write(arr);
+        } else {
+            alert("phần tử " + number + " không có trong mảng");
+
+    }
+
+
+</script>
+
+</body>
+</html>

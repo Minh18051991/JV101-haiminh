@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let chuoi = prompt("Nhập một chuỗi");
+        mang = chuoi.split("");
+   for (let i = 0 ;i< mang.length;i++ ){
+       if (mang[i] ===  "-")
+       {
+           document.write("số" + mang[i+1] + "là số nguyên âm" + "<br>")
+       }
+    }
+</script>
+
+</body>
+</html>

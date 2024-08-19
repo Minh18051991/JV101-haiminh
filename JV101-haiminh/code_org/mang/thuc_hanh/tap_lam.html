@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Độ dài của mang ")
+    while (n < 0 || n > 20 || isNaN(n) || !(n % 1 == 0)) {
+        n = prompt("nhập lại")
+    }
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array.push(+prompt(" nhâp phần tử thứ  :" + i))
+    }
+    alert("mang vừa nhập la  " + array + "độ dài của mảng" + array.length);
+    let chan = 0;
+    let le = 0;
+    for (let i = 0; i < array.length; i++) {
+
+        if (array[i] % 2 === 0) {
+            chan++
+        } else {
+            le++;
+        }
+    }
+    if (chan === le) {
+        alert("ok");
+    } else {
+        alert("no")
+    }
+
+
+</script>
+
+</body>
+</html>

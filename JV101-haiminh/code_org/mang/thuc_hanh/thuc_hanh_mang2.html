@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let x = [-3,5,1,3,2,10];
+    let dauTien = 0 ;
+    let cuoiCung = x.length - 1;
+    while (dauTien<cuoiCung){
+       let i = x[dauTien] ;
+       x[dauTien]= x[cuoiCung];
+       x[cuoiCung]=i;
+       dauTien++;
+        cuoiCung--;
+    }
+    document.write(x);
+</script>
+</body>
+</html>
