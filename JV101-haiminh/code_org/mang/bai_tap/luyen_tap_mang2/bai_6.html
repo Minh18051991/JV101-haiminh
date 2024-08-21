@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập độ dài mảng : ");
+    while (n < 0 || n > 10 || isNaN(n) || !(n % 1 === 0)) {
+        n = prompt("Nhập lại : ");
+    }
+    let mang = [];
+    for (let i = 0; i < n; i++) {
+        mang [i] = prompt("Nhập phần tử : " + "vào vị trí " + i);
+    }
+    document.write("mang ban đầu là : " + mang + "<br>")
+    for (let j = 0; j <mang.length; j++) {
+        if (mang[j] === '-') {
+            mang[j] = "_";
+        }
+    }
+    document.write(mang);
+
+</script>
+
+</body>
+</html>

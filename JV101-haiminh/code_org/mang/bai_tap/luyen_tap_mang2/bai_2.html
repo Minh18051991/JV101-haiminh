@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    let mang = ['a', 'b', 'c', 'd', 'e', '1', '2', '3', '4', '5'];
+    let soDauTien = 0;
+    let soCuoi = mang.length - 1;
+    while (soDauTien < soCuoi) {
+        let a = mang[soDauTien];
+        mang[soDauTien] = mang[soCuoi];
+        mang[soCuoi] = a;
+        soCuoi--;
+        soDauTien++;
+    }
+    document.write(mang);
+</script>
+</body>
+</html>
