@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function meterToFeet(meter) {
+        return 3.279 * meter;
+    }
+
+    function feetToMeter(feet) {
+        return 0.305 * feet;
+    }
+
+    let meter;
+    while (meter < 0 || isNaN(meter)) {
+        meter = prompt(" nhap met de chuyen qua feet");
+    }
+    document.write(meterToFeet(meter) + "<br/>")
+    let feet
+    while (feet < 0 || isNaN(feet)) {
+        feet = prompt(" nhap feet de chuyen qua met");
+    }
+    document.write(feetToMeter(feet)+ "<br/>")
+
+
+</script>
+
+</body>
+</html>
