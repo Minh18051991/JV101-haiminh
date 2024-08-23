@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function checkMin(number) {
+        let numberMin = number[0]
+        for (let i = 0; i < 3; i++) {
+            if (number[i] < numberMin) {
+               numberMin = number[i]
+            }
+        }return  alert("số nhỏ nhất là " + numberMin);
+    }
+    let number1;
+    let number2;
+    let number3
+    while (!(number1 % 1 === 0)) {
+       number1 = prompt("nhâp số thứ 1 :")
+    }
+    while (!(number2 % 1 === 0)) {
+        number2 = prompt("nhâp số thứ 2 :")
+    }
+    while (!(number3 % 1 === 0)) {
+        number3 = prompt("nhâp số thứ 3 :")
+    }
+    let number = [number1, number2, number3];
+    checkMin(number)
+
+
+</script>
+
+</body>
+</html>

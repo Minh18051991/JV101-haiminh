@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let array = [];
+
+    function reserve(array) {
+        array.reverse();
+        return document.write(array)
+    }
+
+    for (let i = 0; i < 5; i++) {
+        array[i] = prompt("nhập số " + i)
+    }
+    document.write("mảng ban đầu là" + array + "<br/>")
+    reserve(array);
+</script>
+</body>
+</html>

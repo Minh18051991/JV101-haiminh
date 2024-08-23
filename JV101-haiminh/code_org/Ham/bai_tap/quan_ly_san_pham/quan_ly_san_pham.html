@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table {
+        width: 500px;
+        border-collapse: collapse;
+        color: black;
+
+    }
+
+    td, th {
+        border: 1px solid;
+        padding: 5px;
+    }
+
+    thead {
+        background: red;
+        color: #ffffff;
+    }
+
+    button {
+        background: #017737;
+        color: #f4efef
+    }
+</style>
+
+<input type="text" id="nameProduce">
+<input type="text" id="idProduce" hidden >
+<button id="addProduct" onclick="addProduce()">add</button>
+<button id="editProduct" onclick="editProduce()">Edit</button>
+<table>
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Tên sản Phẩm</th>
+        <th>Quản lý</th>
+    </tr>
+    </thead>
+    <tbody id="listProduce"></tbody>
+
+</table>
+<script src="quan_ly_san_pham.js"></script>
+</body>
+</html>

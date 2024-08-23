@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+            color: black;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        thead {
+            background: red;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<form id="productForm">
+    <input type="text" id="nameProduce" placeholder="Tên sản phẩm" >
+    <input type="number" id="priceProduce" placeholder="Giá sản phẩm" >
+    <input type="number" id="quantityProduce" placeholder="Số lượng sản phẩm" >
+    <input type="hidden" id="idProduce">
+    <button type="button" onclick="addProduce()">Add</button>
+    <button type="button" onclick="editProduce()">Update</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Quản lý</th>
+    </tr>
+    </thead>
+    <tbody id="listProduce"></tbody>
+</table>
+
+<script src="quan_ly.js"></script>
+</body>
+</html>

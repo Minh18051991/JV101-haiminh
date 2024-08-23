@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(number, array) {
+        let sum = 0
+        for (let i = 0; i < array.length; i++) {
+
+            if (array[i] === number) {
+                sum++;
+            }
+        }
+        if (sum === 0) {
+            alert(" -1 ");
+        } else {
+            alert('số lần xuất hiện là : ' + sum)
+        }
+    }
+
+    let array = [];
+    for (let j = 0; j < 7; j++) {
+        array[j] = prompt("nhập số thứ " + j);
+    }
+    document.write("mảng " + array)
+    let number = prompt(" nhập số bất kỳ ")
+    check(number, array)
+</script>
+</body>
+</html>
