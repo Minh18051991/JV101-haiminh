@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(celcius) {
+            this.celcius = celcius;
+        }
+
+        getCelcius() {
+            if (celcius < -273) {
+                alert(" it can't be this  ")
+                this.celcius = celcius;
+            }
+        }
+
+        getFahrenheit() {
+            return (this.celcius * 1.8) + 32;
+        }
+        getKevin(){
+            return this.celcius + 273;
+        }
+    }
+    let toDayTemperature = new Temperature(25);
+    alert(toDayTemperature.getFahrenheit())
+    alert(toDayTemperature.getKevin())
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(brand) {
+            this.brand = brand;
+            this.battery = 100;
+            this.messageDraft = "";
+            this.messageInbox = [];
+            this.messageSent = [];
+            this.onOffMobile = false;
+        }
+
+        checkPower() {
+            this.onOffMobile = !this.onOffMobile;
+            alert(this.onOffMobile ? "Máy đang bật" : "Máy đang tắt");
+        }
+
+        checkStatus() {
+            return this.onOffMobile;
+        }
+
+        chargeBattery() {
+            if (this.onOffMobile) {
+                alert("battery is charging");
+                this.battery = 100;
+                alert("battery is full")
+            } else {
+                alert("please turn on your phone");
+            }
+        }
+
+        draftMessage(content) {
+            if (this.onOffMobile) {
+                this.messageDraft = content;
+                this.battery -= 1;
+                alert('thư đã được lưu trữ on ${this.brand} "${content}"');
+
+            } else {
+                alert('')
+
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

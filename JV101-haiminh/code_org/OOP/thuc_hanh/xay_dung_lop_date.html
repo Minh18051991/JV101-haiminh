@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Today {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        toStringDate(day,month,year) {
+            return document.write(this.day + "/" + this.month + "/" + this.year)
+        }
+
+        getMonth() {
+            return alert(this.month);
+        }
+        getDay() {
+            return alert(this.day)
+        }
+        getYear(){
+            return alert((this.year))
+        }
+        setDay(day){
+            this.day = day;
+        }
+        setMonth(month) {
+            this.month = month;
+        }
+        setYear(year) {
+            this.year = year;
+        }
+        setDate (day,month,year){
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            return document.write(this.day + "/" + this.month + "/" + this.year)
+        }
+
+    }
+    let today = new Today(19, 5, 1991);
+    today.setDate(18,5,1991)
+   
+
+
+
+
+</script>
+
+</body>
+</html>

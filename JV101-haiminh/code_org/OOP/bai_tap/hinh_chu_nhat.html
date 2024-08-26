@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="idRectangle"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        getArea() {
+            return this.width * this.height;
+        }
+
+        getHeight() {
+            return alert(this.height)
+        }
+
+        getWidth() {
+            return alert(this.width);
+        }
+
+        getPerimeter() {
+            return (this.width + this.height) * 2;
+        }
+
+        setWidth() {
+            return this.width;
+        }
+
+        setHeight() {
+            return this.height;
+        }
+
+        drawRectangle(ctx, x, y, fillColor = 'blue', strokeColor = 'red') {
+            ctx.fillStyle = fillColor;
+            ctx.fillRect(x, y, this.width, this.height);
+            ctx.strokeStyle = strokeColor;
+            ctx.strokeRect(x, y, this.width, this.height);
+        }
+
+
+    }
+
+
+    let rectangle1 = new Rectangle(2000, 1000);
+    document.write('<br/>' + '<br/>' + rectangle1.getArea() + '<br/>');
+    document.write(rectangle1.getPerimeter());
+    const canvas = document.getElementById('idRectangle');
+    const ctx = canvas.getContext('2d');
+    rectangle1.drawRectangle(ctx, 100, 100, "red", "black");
+
+
+</script>
+</body>
+</html>
