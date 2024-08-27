@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        eaten() {
+            if (this.weight > 0) {
+                this.weight -= 1;
+            }
+        }
+
+        empty() {
+            if (this.weight === 0) {
+                alert("quả táo không còn nua")
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.gender = true;
+            this.weight = weight;
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(newName) {
+            return this.name = newName;
+        }
+
+        getWeightHuman() {
+            return alert(`cân nặng lúc này là ${this.weight}`);
+        }
+
+        setWeightHuman(newWeight) {
+            return this.weight = newWeight
+        }
+
+        getGender() {
+            return this.gender ? "male" : "female"
+        }
+
+        say(text) {
+            alert(text);
+        }
+
+        isMale() {
+            if (this.gender) {
+                return alert("Male")
+            } else {
+                return alert("Female")
+            }
+        }
+
+        checkApple(apple) {
+            this.say(`khối lượng quả táo là ${apple.getWeight()}`)
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.eaten()
+                this.weight += 1;
+            }
+        }
+    }
+
+    let adam = new Human("Adam", true, 60);
+    let eva = new Human("Eva", false, 40);
+    let edenApple = new Apple();
+    adam.checkApple(edenApple)
+    eva.checkApple(edenApple)
+    adam.eat(edenApple)
+    eva.eat(edenApple)
+    eva.checkApple(edenApple)
+    adam.getWeightHuman()
+
+</script>
+
+</body>
+</html>

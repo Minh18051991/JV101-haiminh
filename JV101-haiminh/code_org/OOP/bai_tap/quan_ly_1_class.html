@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sản phẩm</title>
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+            color: black;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        thead {
+            background: red;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<form id="productForm">
+    <input type="text" id="nameProduce" placeholder="Tên sản phẩm" >
+    <input type="number" id="priceProduce" placeholder="Giá sản phẩm" >
+    <input type="number" id="quantityProduce" placeholder="Số lượng sản phẩm" >
+    <input type="hidden" id="idProduce">
+    <button type="button" onclick="productManager.addOrUpdateProduct()">Add/Update</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Quản lý</th>
+    </tr>
+    </thead>
+    <tbody id="listProduce"></tbody>
+</table>
+
+<script>
+    class ProductManager {
+        constructor() {
+            this.productList = [
+                { name: "Samsung", price: 23000, quantity: 2 },
+                { name: "Nokia", price: 15000, quantity: 3 },
+                { name: "Iphone", price: 100000, quantity: 1 },
+                { name: "Xiaomi", price: 5000, quantity: 5 }
+            ];
+            this.renderProductList();
+        }
+
+        renderProductList() {
+            const tableBody = document.getElementById("listProduce");
+            tableBody.innerHTML = "";
+            this.productList.forEach((product, index) => {
+                const row = tableBody.insertRow();
+                row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${product.name}</td>
+                <td>${product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}</td>
+                <td>${product.quantity}</td>
+                <td>
+                    <button onclick="productManager.deleteProduct(${index})">Delete</button>
+                    <button onclick="productManager.prepareUpdateProduct(${index})">Update</button>
+                </td>
+            `;
+            });
+        }
+
+        addOrUpdateProduct() {
+            const name = document.getElementById("nameProduce").value;
+            const price = parseFloat(document.getElementById("priceProduce").value);
+            const quantity = parseInt(document.getElementById("quantityProduce").value);
+            const index = document.getElementById("idProduce").value;
+
+            if (name && price > 0 && quantity > 0) {
+                if (index === "") {
+                    this.productList.push({ name, price, quantity });
+                } else {
+                    this.productList[index] = { name, price, quantity };
+                }
+                this.renderProductList();
+                this.clearForm();
+            } else {
+                alert("Vui lòng nhập đầy đủ thông tin và đảm bảo giá và số lượng lớn hơn 0.");
+            }
+        }
+
+        deleteProduct(index) {
+            if (confirm("Bạn có muốn xóa sản phẩm này không?")) {
+                this.productList.splice(index, 1);
+                this.renderProductList();
+            }
+        }
+
+        prepareUpdateProduct(index) {
+            const product = this.productList[index];
+            document.getElementById("nameProduce").value = product.name;
+            document.getElementById("priceProduce").value = product.price;
+            document.getElementById("quantityProduce").value = product.quantity;
+            document.getElementById("idProduce").value = index;
+        }
+
+        clearForm() {
+            document.getElementById("nameProduce").value = "";
+            document.getElementById("priceProduce").value = "";
+            document.getElementById("quantityProduce").value = "";
+            document.getElementById("idProduce").value = "";
+        }
+    }
+
+    let productManager = new ProductManager();
+
+    document.addEventListener('DOMContentLoaded', function () {
+        productManager.renderProductList();
+    });
+</script>
+</body>
+</html>
